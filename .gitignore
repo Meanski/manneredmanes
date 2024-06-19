@@ -1,0 +1,13 @@
+# Ignore the virtual environment folder
+mm/
+
+# Ignore the .env file
+.env
+
+# Ignore log files
+*.log
+
+# Other common ignores
+__pycache__/
+*.pyc
+.DS_Store
