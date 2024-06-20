@@ -56,8 +56,8 @@ async def on_ready():
 #Load up cogs and run the bot
 async def main():
 
-    #We'll add stuff here
-    #await bot.load_extension('src.X')
+    #Events
+    await bot.load_extension('src.Events.MessageEdited')
 
     print('Extensions loaded. Bot is ready.')
     await bot.start(token)
