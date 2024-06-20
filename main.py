@@ -58,6 +58,7 @@ async def main():
 
     #Events
     await bot.load_extension('src.Events.MessageEdited')
+    await bot.load_extension('src.Events.MessageDeleted')
 
     print('Extensions loaded. Bot is ready.')
     await bot.start(token)
