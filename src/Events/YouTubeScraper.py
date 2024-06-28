@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands, tasks
 from googleapiclient.discovery import build
 import json
+import os
 
 with open('config.json') as f:
     config = json.load(f)
