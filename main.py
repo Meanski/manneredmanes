@@ -64,10 +64,14 @@ async def main():
     # Load the Kick cog
     await bot.load_extension('src.Commands.Moderation.Kick')
 
+    # Commands
+        # Public
+    await bot.load_extension('src.Commands.Public.SupportTicket')
+
     # Events
     await bot.load_extension('src.Events.MessageEdited')
     await bot.load_extension('src.Events.MessageDeleted')
-    await bot.load_extension('src.YouTubeScraper')
+    await bot.load_extension('src.Events.YouTubeScraper')
 
     print('Extensions loaded. Bot is ready.')
     await bot.start(token)
