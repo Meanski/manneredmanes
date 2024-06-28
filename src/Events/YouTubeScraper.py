@@ -1,10 +1,7 @@
 import discord
 from discord.ext import commands, tasks
 from googleapiclient.discovery import build
-import json
-
-with open('config.json') as f:
-    config = json.load(f)
+import os
 
 YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
 YOUTUBE_CHANNEL_ID = 'UC6HEhd6eFIAmnwoi77hnNIw'
@@ -53,5 +50,5 @@ class YouTubeScraper(commands.Cog):
     async def before_check_new_video(self):
         await self.bot.wait_until_ready()
 
-def setup(bot):
-    bot.add_cog(YouTubeScraper(bot))
+async def setup(bot):
+    await bot.add_cog(YouTubeScraper(bot))
