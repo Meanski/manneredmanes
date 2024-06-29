@@ -65,6 +65,8 @@ async def main():
     await bot.load_extension('src.Commands.Moderation.Kick')
 
     # Commands
+        # Moderation
+    await bot.load_extension('src.Commands.Moderation.Say')
         # Public
     await bot.load_extension('src.Commands.Public.SupportTicket')
 
